@@ -1,0 +1,58 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:webui="http://www.neoflex.ru/webui"
+	xmlns:rich="http://richfaces.org/rich" template="/templates/main.xhtml">
+	<ui:param name="footerHeight" value="6.5" />
+
+	<ui:define name="page_header">
+		<webui:gridLayout cellpadding="10px" width="100%" columns="1">
+			<ui:include src="/pages/parts/top.xhtml">
+				<ui:param name="pageMsg" value="#{msg}" />
+			</ui:include>
+			<webui:cell width="100%" >
+				<div
+					style="width: 100%; font-size: 1px; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: rgb(192, 192, 192);" />
+			</webui:cell>
+		</webui:gridLayout>
+	</ui:define>
+
+	<ui:define name="page_body">
+		<h3><ui:insert name="form_header">Header<br />
+		</ui:insert></h3>
+		<h:form id="productform">
+			<webui:messages styleClass="messages" layout="list" id="msgs"
+				showDetail="false" showSummary="true">
+				<f:facet name="errorMarker">
+					<h:graphicImage url="/theme/img/error.gif" />
+				</f:facet>
+				<f:facet name="fatalMarker">
+					<h:graphicImage url="/theme/img/error.gif" />
+				</f:facet>
+				<f:facet name="infoMarker">
+					<h:graphicImage url="/theme/img/info.gif" />
+				</f:facet>
+				<f:facet name="warnMarker">
+					<h:graphicImage url="/theme/img/warning.gif" />
+				</f:facet>
+			</webui:messages>
+
+			<ui:insert name="form_body">Body<br />
+			</ui:insert>
+		</h:form>
+	</ui:define>
+
+	<ui:define name="page_footer">
+		<table cellpadding="10px" style="width: 100%">
+			<tbody>
+				<tr>
+					<td><ui:include src="/pages/parts/bottom.xhtml">
+						<ui:param name="version" value="${artifactVersion.version}" />
+					</ui:include></td>
+				</tr>
+			</tbody>
+		</table>
+	</ui:define>
+</ui:composition>

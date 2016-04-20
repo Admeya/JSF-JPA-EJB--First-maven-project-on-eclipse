@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>net.java.jee</groupId>
+    <artifactId>artifacts.net.java.jee</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>net.java.ejb</artifactId>
+  <packaging>ejb</packaging>
+  
+  <dependencies>
+		<dependency>
+			<groupId>javax.ejb</groupId>
+			<artifactId>ejb-api</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.openjpa</groupId>
+			<artifactId>openjpa</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>oracle.database</groupId>
+			<artifactId>ojdbc5</artifactId>
+		</dependency>
+		
+	</dependencies>
+  
+  
+  <build>
+  <plugins>
+  <plugin>
+		<artifactId>maven-compiler-plugin</artifactId>
+  </plugin>
+  
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-ejb-plugin</artifactId>
+        <configuration>
+            <ejbVersion>3.0</ejbVersion>
+        </configuration>
+    </plugin>
+  </plugins>
+</build>
+  </project>
