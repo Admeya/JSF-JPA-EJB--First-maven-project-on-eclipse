@@ -133,7 +133,7 @@
                 <scope>provided</scope>
             </dependency>
             
-           <dependency>
+           <!-- <dependency>
             	<groupId>ru.neoflex.faces</groupId>
             	<artifactId>neoflex.faces.events</artifactId>
             	<version>${neoflex.faces.version}</version>
@@ -175,7 +175,13 @@
                 <groupId>ru.neoflex.common</groupId>
                 <artifactId>neoflex.common.utils</artifactId>
                 <version>${neoflex.common.version}</version>
-         </dependency> 
+         </dependency> -->
+         
+         <dependency>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>${primefaces-version}</version>
+        </dependency>
 	</dependencies>
 </dependencyManagement>	
 

@@ -19,10 +19,10 @@
 			<artifactId>openjpa</artifactId>
 		</dependency>
 		
-		<dependency>
+		<!-- <dependency>
 			<groupId>oracle.database</groupId>
 			<artifactId>ojdbc5</artifactId>
-		</dependency>
+		</dependency> -->
 		
 	</dependencies>
   
