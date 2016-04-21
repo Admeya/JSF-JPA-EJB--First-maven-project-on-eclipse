@@ -24,6 +24,29 @@
 			<artifactId>ojdbc5</artifactId>
 		</dependency> -->
 		
+		 <dependency>
+		<groupId>com.sun.faces</groupId>
+		<artifactId>jsf-api</artifactId>		
+		<scope>compile</scope>
+	</dependency>
+	
+	<dependency>
+	<groupId>mysql</groupId>
+	<artifactId>mysql-connector-java</artifactId>
+	<version>6.0.2</version>
+</dependency>
+
+<dependency>
+    <groupId>org.hibernate.javax.persistence</groupId>
+    <artifactId>hibernate-jpa-2.1-api</artifactId>
+    <version>1.0.0.Final</version>
+</dependency>
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-entitymanager</artifactId>
+    <version>4.3.5.Final</version>
+</dependency>
+		
 	</dependencies>
   
   

@@ -2,21 +2,22 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.prime.com.tr/ui"> 
+      xmlns:p="http://primefaces.org/ui"> 
       
 <h:head></h:head>
 <h:body>
     <h:form>
         <p:panel>
-            <h:panelGrid columns="2">
+            <h:panelGrid columns="2">            
                 <h:outputText value="Логин" />
-                <h:inputText value="#{mainBean.userLogin}" width="10px"/>
+                <h:inputText value="#{sessionBean.userLogin}" width="10px" required="true" requiredMessage="Поле 'Логин' обязательно для заполнения!"/>
                 <h:outputText value="Пароль"/>
-                <h:inputSecret value="#{mainBean.password}" width="10px"/>
+                <h:inputSecret value="#{sessionBean.userPassword}" width="10px" required="true" requiredMessage="Поле 'Пароль' обязательно для заполнения!"/>
                 <h:outputText value="Произвольный текст"/>
-                <h:inputTextarea row="10" value="#{mainBean.text}" width="10px"/>
+                <h:inputTextarea row="10" value="#{sessionBean.text}" width="10px"/>
             </h:panelGrid>
-            <h:commandButton value="Вход" action="#{mainBean.checkUser}"/>
+            <h:commandButton value="Вход" action="#{sessionBean.processLogin}"/>
+        <p:spinner />
         </p:panel>
     </h:form>
 </h:body>
