@@ -10,13 +10,11 @@
         <p:panel>
             <h:panelGrid columns="2">            
                 <h:outputText value="Логин" />
-                <h:inputText value="#{sessionBean.userLogin}" width="10px" required="true" requiredMessage="Поле 'Логин' обязательно для заполнения!"/>
+                <h:inputText value="#{usersController.userEntity.userLogin}" width="10px" required="true" requiredMessage="Поле 'Логин' обязательно для заполнения!"/>
                 <h:outputText value="Пароль"/>
-                <h:inputSecret value="#{sessionBean.userPassword}" width="10px" required="true" requiredMessage="Поле 'Пароль' обязательно для заполнения!"/>
-                <h:outputText value="Произвольный текст"/>
-                <h:inputTextarea row="10" value="#{sessionBean.text}" width="10px"/>
+                <h:inputSecret value="#{usersController.userEntity.userPassword}" width="10px" required="true" requiredMessage="Поле 'Пароль' обязательно для заполнения!"/>
             </h:panelGrid>
-            <h:commandButton value="Вход" action="#{sessionBean.processLogin}"/>
+            <h:commandButton value="Вход" action="#{usersController.checkUserExist}"/>
         <p:spinner />
         </p:panel>
     </h:form>

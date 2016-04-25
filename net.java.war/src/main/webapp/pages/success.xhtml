@@ -8,16 +8,14 @@ Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <h:body>
   <p:panel>
-          <h:outputText value="Добро пожаловать: #{sessionBean.userName}!">
+          <h:outputText value="Добро пожаловать: #{usersController.userEntity.userName}!">
   </h:outputText>
 </p:panel>
     <h:form>
-        <h:panelGrid columns="3" cellpadding="5">
-            <h:outputText value="Текст: "/>
+        <h:panelGrid columns="3" cellpadding="5">            
             <p:inputText value="#{sessionBean.text}">
                 <p:ajax event="keyup" update="out1"/>
-            </p:inputText>
-            <h:outputText id="out1" value="#{sessionBean.text}"/>
+            </p:inputText>            
         </h:panelGrid>
     </h:form>
 </h:body>
